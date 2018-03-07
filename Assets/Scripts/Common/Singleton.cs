@@ -13,8 +13,6 @@ public partial class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if (applicationQuit)
                 return null;
 
-            string typeName = typeof(T).Name;
-
             if (instance == null)
                 instance = new GameObject(typeof(T).Name).AddComponent<T>();
 
