@@ -160,7 +160,7 @@ public partial class WebViewManager
     [SerializeField]
     Texture closeButtonTexture;
 
-    private WebViewObject webViewObject;
+    WebViewObject webViewObject;
 }
 
 #endregion
