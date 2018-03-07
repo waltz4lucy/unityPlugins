@@ -13,6 +13,13 @@ public partial class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if (applicationQuit)
                 return null;
 
+            string typeName = typeof(T).Name;
+
+            var prefab = Resources.Load("Prefabs/" + typeName);
+
+            if (prefab != null)
+                instance = (Instantiate(prefab) as GameObject).GetComponent<T>();
+
             if (instance == null)
                 instance = new GameObject(typeof(T).Name).AddComponent<T>();
 
