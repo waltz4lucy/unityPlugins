@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-#region iOS
-
 public partial class UnityNative
 {
 #if !UNITY_EDITOR && UNITY_IPHONE
@@ -26,14 +24,31 @@ public partial class UnityNative
     }
 }
 
-#endregion
-
-#region Android
+#region Implements
 
 public partial class UnityNative
 {
 #if UNITY_ANDROID
+    static void AndroidAction(System.Action<AndroidJavaClass> action)
+    {
+        using (var javaClass = GetJavaClass())
+        {
+            action(javaClass);
+        }
+    }
 
+    static T AndroidAction<T>(System.Func<AndroidJavaClass, T> action)
+    {
+        using (var javaClass = GetJavaClass())
+        {
+            return action(javaClass);
+        }
+    }
+
+    static AndroidJavaClass GetJavaClass()
+    {
+        return new AndroidJavaClass(NexusPersonalConfig.Instance.bundleIdentifier + ".library.NexusAndroidNative");
+    }
 #endif
 }
 
