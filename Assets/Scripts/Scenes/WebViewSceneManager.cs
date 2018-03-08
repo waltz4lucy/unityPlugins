@@ -9,7 +9,7 @@ public class WebViewSceneManager : MonoBehaviour
     public InputField inputField;
     public Text text;
 
-    private string url;
+    private string url = "https://github.com/waltz4lucy/unityPlugins";
 
     public void Awake()
     {
