@@ -3,7 +3,6 @@
     {
         "**/.DS_Store":true,
         "**/.git":true,
-        "**/.gitignore":false,
         "**/.gitmodules":true,
         "**/*.booproj":true,
         "**/*.pidb":true,
@@ -43,8 +42,6 @@
         "**/*.meta":true,
         "**/*.prefab":true,
         "**/*.unity":true,
-        "*.csproj":true,
-        "*.sln":false,
         "build/":true,
         "Build/":true,
         "Library/":true,
