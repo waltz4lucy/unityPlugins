@@ -18,7 +18,7 @@ public class WebViewSceneManager : MonoBehaviour
 
     void Start()
     {
-        button.onClick.AddListener(delegate { 
+        button.onClick.AddListener(delegate {
             OnClick();
         });
 
