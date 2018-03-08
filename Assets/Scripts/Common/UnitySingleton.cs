@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public partial class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public partial class UnitySingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance
     {
@@ -62,7 +62,7 @@ public partial class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
 #region Implements
 
-public partial class Singleton<T>
+public partial class UnitySingleton<T>
 {
     static T instance;
     static bool applicationQuit;

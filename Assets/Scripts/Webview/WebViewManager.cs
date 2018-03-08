@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public partial class WebViewManager : Singleton<WebViewManager>
+public partial class WebViewManager : UnitySingleton<WebViewManager>
 {
     public bool IsOpened { get { return null != webViewObject; } }
 
